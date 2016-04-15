@@ -1,0 +1,65 @@
+.menuBar{
+width:100%;
+overflow:hidden;
+padding:1%;
+}
+.menuBar a .bulletSpan{
+cursor:pointer;
+    padding: 1px 9px;
+    background: #fff;
+    border: 1px solid #0FB2D8;
+    border-radius: 10px;
+    position: relative;
+}
+.menuBar .progressDone .bulletSpan{
+border:1px solid #fff;
+    background: #0FB2D8;   
+	-webkit-box-shadow: inset 4px 6px 12px 0px rgba(41, 50, 87, 0.75);
+-moz-box-shadow:    inset 4px 6px 12px 0px rgba(41, 50, 87, 0.75);
+box-shadow:         inset 4px 6px 12px 0px rgba(41, 50, 87, 0.75);
+}
+.menuBar li{
+list-style: none;
+float: left;
+position:relative;
+}
+.menuBar li .separate{
+border-top: 1px solid #31734D;;
+    border-bottom: 2px solid #99BE4B;
+	width:0px;
+ padding: 0px 0px 0px 0px;
+ display: inline-block;
+ position: absolute;
+ top: 7px;
+ 	margin-bottom:4px;
+		-webkit-box-shadow: 0px 2px 13px 0px rgba(46, 50, 53, 0.75);
+-moz-box-shadow:    0px 2px 13px 0px rgba(46, 50, 53, 0.75);
+box-shadow:         0px 2px 13px 0px rgba(46, 50, 53, 0.75);
+	
+
+}
+.menuBar .bulletSpan:after{
+    content: '';
+    padding: 3px;
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    background: #fff;
+    border-radius: 5px;
+}
+.menuBar .bulletSpan:before{
+    content: '';
+    padding: 4px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background: #000;
+    opacity: 0.5;
+    border-radius: 5px;
+}
+.menuBar .navName{
+    width: 70%;
+    text-align: center;
+    margin-left: -28%;
+	color: #2A9EB9;
+}
