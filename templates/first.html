@@ -1,1 +1,84 @@
+<div>
+<h3 class="headerH">Welcome to Navigationsleiste........ </h3>
 
+<p>
+Adding progress bar on mouse click is something different and this custom directive will do the trick for you. When a user clicks a "save" or "next" button, this navigation progress bar will animated and updated accordingly.
+This visually appealing progress bar is easy to configure and will look great on any design. you could add more links to the step navigation and also you can customize the style of the progressbar if you want. Shall we dive in to Navigationsleiste?
+</p>
+
+<h4 class="headerH">Usage</h4>
+<h5 class="headerH">Requirements</h5>
+<ul>
+<li>AngularJS v1.2.0+ is currently required.</li>
+<li>angular route js</li>
+<li>angular animate js</li>
+<li>jQuery</li>
+</ul>
+<h5 class="headerH">Installation</h5>
+<p>Include the above javascript files and the css file inside the html </p>
+<pre>
+	&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"&gt;&lt;/script&gt;
+	&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.min.js"&gt;&lt;/script&gt;
+	&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js"&gt;&lt;/script&gt;
+	&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"&gt;&lt;/script&gt;
+	&lt;script src="navigationsleiste.js"&gt;&lt;/script&gt;
+	
+	&lt;link rel="stylesheet" href="css/navStyle.css"/&gt;
+</pre>
+<p>You could copy and paste the navigationsleiste.js from js/navigationsleiste/ folder. Include the module 'navigationsleiste' along with your app.</p>
+<pre>
+angular.module('myApp',['ngRoute','navigationsleiste']);
+</pre>
+<p>Inside your main controller that is going to use the Navigationsleiste, you need to set a scope variable named 'menuList' with the details of the navigation steps. Sample data is included here.</p>
+
+<pre>
+	$scope.menuList=[
+			{ 
+			item:'first page',
+			url:'/firstpage',
+			status:''
+			},
+			{ 
+			item:'second page',
+			url:'/secondpagetest',
+			status:''
+			},
+			{ 
+			item:'third page',
+			url:'/thirdpage',
+			status:''
+			},
+		]
+</pre>
+<p>
+Finally add the directive to you html page before the ng-view
+<pre>
+&lt;div navigationsleiste-step-navigation menu-list="menuList"&gt;&lt;/div&gt;
+</pre>
+</p>
+Here we go......Our awesome navigation is ready
+<h5 class="headerH">Customisation</h5>
+<p>You need to include only the navStyle css to make the directive display properly. Please feel free to play with this css to make it suitable for your website</p>
+
+<h5 class="headerH">Demo</h5>
+<p>You can see the navigation demo on top. You can click on the radio buttons to navigate to the respective page. Along with that we are attaching some anchor tag to show you the a detailed demo </p>
+<p>
+	<a ng-href="#/sixth" class="btnStyle" >		
+			<span>navigate to last page</span>		
+	</a>
+	<a ng-href="#/thirdpage" class="btnStyle" >		
+			<span>navigate to Third page</span>		
+	</a>
+	<a ng-click="delayedUrl(5)" class="btnStyle" >		
+			<span>navigate to last page with delay</span>		
+	</a>
+	
+</p>
+<p>On the first button 'navigate to last page' click, the page is loading before the animation is complete. To avoid this you can use a dependency on delayedUrlUpdate and you can call 
+<pre>delayedUrlUpdate.delayIt(indx);</pre>
+which will update the url after the completion of the animation. Please note that the indx will be the array index of the curresponding Url. The last button is the example of the same.
+</p>
+
+<p>Thank you for visiting this blog.</p>
+<br/>
+</div>

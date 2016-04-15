@@ -1,0 +1,11 @@
+<div ng-style="{'margin-left': initMargin}">
+<li ng-repeat="item in menuList" ng-class="{'active':item.status=='active','complete':item.status=='complete'}" ng-style="{'width': liWidth}">
+<a ng-click="updateStatus($index)" class="bullets" ng-class="{'completea':item.status=='complete'}">
+<span class="bulletSpan"></span>
+</a>
+
+<div class="separate" ng-show="item.status=='complete'"></div>
+
+<div class="navName">{{item.item}}</div>
+</li>
+<div>
