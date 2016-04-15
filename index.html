@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en">
+	<head>
+<link href="css/style.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/bootstrap.min.css"/> 
+<!-- this is the only stylesheet needed for the directive to work with -->
+<link rel="stylesheet" href="css/navStyle.css"/> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="js/navigationsleiste/navigationsleiste.js"></script>
+<script type="text/javascript" src="js/app.js?v=2.5"></script>
+
+</head>
+<body  ng-controller="myCtrl">
+
+    <nav class="navbar navbar-fixed-top">
+      <div class="container" style=" background: #fff;">
+        <div class="navbar-header col-md-6">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand col-md-12" href="#">
+          <div class="pull-left"> <img src="logo.png" alt="Navigationsleiste" class="logoImage"/></div>
+          <div  class="pull-left logoDiv  col-md-7 ">
+          	<span class="logoSpan display_block">Navigationsleiste</span>
+            <span class="logoSubtitle visible-lg">a step navigation in angularJs</span>
+          </div>
+          </a>
+        </div>  
+		<div class="col-md-4 col-md-offset-2 text-right developedBy" >
+		<div>Designed and developed By: <span>Varada.C.S</span></div>
+		<div>Contact me:  <span>varadasajan@gmail.com </span></div>
+		</div>
+		<div class="menuBar">			
+			<div navigationsleiste-step-navigation menu-list="menuList"></div>
+		</div>		
+      </div>
+    </nav>
+<div class="container">
+     <div class="headerSeperator"></div>
+		<div class="row col-md-12 sliderWraper " >
+			<div ng-view style="border: 1px solid #0FB2D8;    margin-bottom: 10px;"  class="fade page col-sm-12"></div>
+		</div>
+	</div>
+</body>
+</html>
