@@ -56,7 +56,7 @@ angular.module('myApp',['ngRoute','navigationsleiste']);
 			},
 		]
 </pre>
-<p>
+<p>I have included the template for this directive in template folder in the example given. If you want to change that path, please open the js\navigationsleiste\navigationsleiste.js and replace the text 'templates/menuNav.html' accordingly. 
 Finally add the directive to you html page before the ng-view
 <pre>
 &lt;div navigationsleiste-step-navigation menu-list="menuList"&gt;&lt;/div&gt;
