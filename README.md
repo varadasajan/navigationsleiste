@@ -1,6 +1,6 @@
 <!--
   Title: Navigationsleiste
-  Description: An app to show step navigation progress using angular js.
+  Description: An app to show step navigation progress using angular js.A step navigation using angular js.
   Author: Varada Sajan
   -->
 
