@@ -1,11 +1,11 @@
 <!--
   Title: Navigationsleiste
-  Description: An app to show step navigation progress using angular js.A step navigation using angular js.
+  Description: An app to show step navigation progress using angular js.A step navigation using angularjs.
   Author: Varada Sajan
   -->
 
 # navigationsleiste
-An app to show step navigation progress using angular js
+An app to show step navigation using angular js. 
 
 <p>
 Adding progress bar on mouse click is something different and this custom directive will do the trick for you. When a user clicks a "save" or "next" button, this navigation progress bar will animated and updated accordingly.
